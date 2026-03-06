@@ -1,6 +1,6 @@
 # AWEsome Multi-Agents Skills
 
-> 面向 Autonomous World / Multi-Agent / Thomas World 的开源 Skill 索引
+> 面向 Autonomous World / Multi-Agent 的开源 Skill 索引
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
 [![Skills](https://img.shields.io/badge/skills-2-brightgreen)](./skills/)

@@ -1,6 +1,6 @@
 # AWEsome Multi-Agents Skills
 
-> Open-source Skill index for Autonomous World / Multi-Agent / Thomas World
+> Open-source Skill index for Autonomous World / Multi-Agent
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
 [![Skills](https://img.shields.io/badge/skills-2-brightgreen)](./skills/)

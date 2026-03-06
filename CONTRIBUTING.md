@@ -114,6 +114,6 @@ See [`categories.json`](./categories.json). Summary:
 
 ## Review criteria
 
-- Skill must be relevant to AWE / Autonomous World / Multi-Agent / Thomas World
+- Skill must be relevant to AWE / Autonomous World / Multi-Agent
 - Descriptions must be clear so that AI can recommend the Skill when appropriate
 - Avoid listing multiple Skills that do the same thing
