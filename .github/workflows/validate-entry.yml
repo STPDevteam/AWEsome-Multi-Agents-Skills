@@ -1,0 +1,111 @@
+name: Validate Skill Entry
+
+on:
+  pull_request:
+    paths:
+      - 'skills/**/entry.json'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    name: Validate entry.json
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Find changed entry.json files
+        id: changed
+        run: |
+          # Use HEAD~1 for fork PRs where base_ref may not exist on origin
+          BASE_REF="${{ github.base_ref }}"
+          if [ -n "$BASE_REF" ] && git rev-parse "origin/$BASE_REF" >/dev/null 2>&1; then
+            CHANGED=$(git diff --name-only "origin/$BASE_REF"...HEAD | grep 'skills/.*/entry.json' || true)
+          else
+            CHANGED=$(git diff --name-only HEAD~1...HEAD | grep 'skills/.*/entry.json' || true)
+          fi
+          echo "files<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGED" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+          echo "Changed files: $CHANGED"
+
+      - name: Validate entry.json schema
+        run: |
+          VALID_TYPES='["skill","mcp","agent","model","tool","other"]'
+          for file in ${{ steps.changed.outputs.files }}; do
+            echo "Validating $file..."
+
+            # Check file exists and is valid JSON
+            if ! python3 -c "import json; json.load(open('$file'))" 2>/dev/null; then
+              echo "::error file=$file::Invalid JSON format"
+              exit 1
+            fi
+
+            # Check required fields
+            python3 << 'EOF'
+          import json, sys, os
+
+          with open("$file") as f:
+              data = json.load(f)
+
+          required = ["slug", "name", "description", "github", "tags", "category", "added", "type"]
+          missing = [f for f in required if f not in data or not data[f]]
+          if missing:
+              print(f"::error file=$file::Missing required fields: {missing}")
+              sys.exit(1)
+
+          # Validate type field
+          valid_types = ["skill", "mcp", "agent", "model", "tool", "other"]
+          if data.get("type") not in valid_types:
+              print(f"::error file=$file::type must be one of {valid_types}, got: {data.get('type')}")
+              sys.exit(1)
+
+          # Validate slug matches directory name
+          dir_slug = os.path.basename(os.path.dirname("$file"))
+          if data["slug"] != dir_slug:
+              print(f"::error file=$file::slug '{data['slug']}' must match directory name '{dir_slug}'")
+              sys.exit(1)
+
+          # Validate description length (primary English, <= 120 chars)
+          if len(data["description"]) > 120:
+              print(f"::warning file=$file::description is {len(data['description'])} chars, recommended <= 120")
+
+          # Validate github format
+          github = data["github"]
+          if github.count("/") != 1 or github.startswith("https://"):
+              print(f"::error file=$file::github field must be 'owner/repo' format, got: {github}")
+              sys.exit(1)
+
+          print(f"✅ {data['slug']} - validation passed")
+          EOF
+          done
+
+      - name: Check GitHub repo accessibility
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          for file in ${{ steps.changed.outputs.files }}; do
+            GITHUB=$(python3 -c "import json; print(json.load(open('$file'))['github'])")
+            OWNER=$(echo $GITHUB | cut -d'/' -f1)
+            REPO=$(echo $GITHUB | cut -d'/' -f2)
+
+            echo "Checking https://github.com/$GITHUB ..."
+
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+              -H "Authorization: token $GITHUB_TOKEN" \
+              "https://api.github.com/repos/$OWNER/$REPO")
+
+            if [ "$STATUS" != "200" ]; then
+              echo "::error file=$file::GitHub repo $GITHUB is not accessible (HTTP $STATUS)"
+              exit 1
+            fi
+
+            # Check SKILL.md exists
+            SKILL_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+              -H "Authorization: token $GITHUB_TOKEN" \
+              "https://api.github.com/repos/$OWNER/$REPO/contents/SKILL.md")
+
+            if [ "$SKILL_STATUS" != "200" ]; then
+              echo "::warning file=$file::SKILL.md not found in $GITHUB root — recommended but not required"
+            fi
+
+            echo "✅ $GITHUB is accessible"
+          done

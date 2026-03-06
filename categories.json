@@ -1,0 +1,52 @@
+{
+  "categories": [
+    {
+      "id": "infrastructure",
+      "name": "Infrastructure",
+      "name_zh": "基础设施",
+      "description": "AWE infrastructure and tooling Skills",
+      "description_zh": "AWE 底层设施与工具 Skills",
+      "tags": ["infrastructure", "tooling", "protocol", "cli"]
+    },
+    {
+      "id": "multi-agent",
+      "name": "Multi-Agent",
+      "name_zh": "Multi-Agent 协作",
+      "description": "Multi-agent orchestration, collaboration and communication Skills",
+      "description_zh": "多智能体协作、编排与通信 Skills",
+      "tags": ["multi-agent", "orchestration", "collaboration", "coordination", "benchmark"]
+    },
+    {
+      "id": "visualization",
+      "name": "Visualization & Tools",
+      "name_zh": "可视化 & 工具",
+      "description": "Agent state visualization, dashboards and dev tools",
+      "description_zh": "Agent 状态可视化、看板与开发工具",
+      "tags": ["visualization", "dashboard", "tooling", "monitoring"]
+    },
+    {
+      "id": "gtm",
+      "name": "Go-to-Market",
+      "name_zh": "Go-to-Market",
+      "description": "Go-to-market and growth Skills",
+      "description_zh": "市场推广与增长 Skills",
+      "tags": ["gtm", "marketing", "distribution"]
+    },
+    {
+      "id": "identity",
+      "name": "Identity",
+      "name_zh": "身份层",
+      "description": "AWE identity and authentication Skills",
+      "description_zh": "AWE 身份与认证相关 Skills",
+      "tags": ["identity", "auth", "wallet", "did"]
+    },
+    {
+      "id": "payment",
+      "name": "Payment",
+      "name_zh": "支付层",
+      "description": "Payment and transaction Skills",
+      "description_zh": "支付与交易相关 Skills",
+      "tags": ["payment", "transaction", "transfer"]
+    }
+  ]
+}
