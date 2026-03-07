@@ -9,6 +9,7 @@ This repo uses a **structured index**:
 - Each Skill has machine-readable metadata in `skills/<slug>/entry.json`
 - The actual `SKILL.md` files live in each project’s repo root and **are not stored here**
 - The Dashboard (AWEsome Dashboard) reads from `entry.json` automatically
+- The index uses `type` for entry shape and `tags` for topics/capabilities
 
 ```
 AWEsome-Multi-Agents-Skills/
@@ -48,8 +49,8 @@ Add `skills/<your-slug>/entry.json` with (**English is the primary language**; C
   "description_zh": "中文描述（可选，80 字以内）",
   "github": "owner/repo",
   "tags": ["multi-agent"],
-  "category": "multi-agent",
   "added": "2026-03-06",
+  "type": "tool",
   "featured": false
 }
 ```
@@ -88,20 +89,20 @@ Maintainers can create the `entry.json` and update the index for you.
 | `description` | string | ✅ | **Primary (English) description**, ≤ 120 chars |
 | `description_zh` | string | — | **Optional Chinese description**, ≤ 80 chars |
 | `github` | string | ✅ | `owner/repo`, without `https://github.com/` |
-| `tags` | string[] | ✅ | At least one; see tag list below |
-| `category` | string | ✅ | Primary category id; see `categories.json` |
+| `tags` | string[] | ✅ | At least one topic/capability tag; see `categories.json` |
 | `added` | string | ✅ | Date added, `YYYY-MM-DD` |
+| `type` | string | ✅ | Entry type: `skill`, `mcp`, `agent`, `model`, `tool`, `other` |
 | `featured` | boolean | — | Featured flag; default `false` |
 
-## Categories and tags
+## Recommended tags
 
-See [`categories.json`](./categories.json). Summary:
+See [`categories.json`](./categories.json) for recommended tag groups. Summary:
 
-| Category | Example tags |
+| Tag group | Example tags |
 |----------|----------------|
 | Infrastructure | `infrastructure` `tooling` `protocol` `cli` |
 | Multi-Agent | `multi-agent` `orchestration` `collaboration` `coordination` `benchmark` |
-| Visualization & Tools | `visualization` `dashboard` `monitoring` |
+| Visualization | `visualization` `dashboard` `monitoring` |
 | Go-to-Market | `gtm` `marketing` `distribution` |
 | Identity | `identity` `auth` `wallet` `did` |
 | Payment | `payment` `transaction` `transfer` |

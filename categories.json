@@ -4,48 +4,48 @@
       "id": "infrastructure",
       "name": "Infrastructure",
       "name_zh": "基础设施",
-      "description": "AWE infrastructure and tooling Skills",
-      "description_zh": "AWE 底层设施与工具 Skills",
+      "description": "Recommended tags for infrastructure, protocols, CLI, and developer tooling",
+      "description_zh": "面向基础设施、协议、CLI 与开发工具的推荐标签组",
       "tags": ["infrastructure", "tooling", "protocol", "cli"]
     },
     {
       "id": "multi-agent",
       "name": "Multi-Agent",
       "name_zh": "Multi-Agent 协作",
-      "description": "Multi-agent orchestration, collaboration and communication Skills",
-      "description_zh": "多智能体协作、编排与通信 Skills",
+      "description": "Recommended tags for multi-agent orchestration, collaboration, and evaluation",
+      "description_zh": "面向多智能体编排、协作与评测的推荐标签组",
       "tags": ["multi-agent", "orchestration", "collaboration", "coordination", "benchmark"]
     },
     {
       "id": "visualization",
-      "name": "Visualization & Tools",
-      "name_zh": "可视化 & 工具",
-      "description": "Agent state visualization, dashboards and dev tools",
-      "description_zh": "Agent 状态可视化、看板与开发工具",
+      "name": "Visualization",
+      "name_zh": "可视化",
+      "description": "Recommended tags for dashboards, state visualization, and monitoring experiences",
+      "description_zh": "面向仪表盘、状态可视化与监控体验的推荐标签组",
       "tags": ["visualization", "dashboard", "tooling", "monitoring"]
     },
     {
       "id": "gtm",
       "name": "Go-to-Market",
       "name_zh": "Go-to-Market",
-      "description": "Go-to-market and growth Skills",
-      "description_zh": "市场推广与增长 Skills",
+      "description": "Recommended tags for go-to-market, marketing, and distribution workflows",
+      "description_zh": "面向市场推广、营销与分发工作流的推荐标签组",
       "tags": ["gtm", "marketing", "distribution"]
     },
     {
       "id": "identity",
       "name": "Identity",
       "name_zh": "身份层",
-      "description": "AWE identity and authentication Skills",
-      "description_zh": "AWE 身份与认证相关 Skills",
+      "description": "Recommended tags for identity, authentication, wallets, and DID systems",
+      "description_zh": "面向身份、认证、钱包与 DID 系统的推荐标签组",
       "tags": ["identity", "auth", "wallet", "did"]
     },
     {
       "id": "payment",
       "name": "Payment",
       "name_zh": "支付层",
-      "description": "Payment and transaction Skills",
-      "description_zh": "支付与交易相关 Skills",
+      "description": "Recommended tags for payments, transactions, and transfer flows",
+      "description_zh": "面向支付、交易与转账流程的推荐标签组",
       "tags": ["payment", "transaction", "transfer"]
     }
   ]

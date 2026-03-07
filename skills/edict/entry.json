@@ -5,7 +5,6 @@
   "description_zh": "三省六部制 Multi-Agent 编排系统——9 个专职 AI Agent，配备实时军机处看板、模型热切换与完整审计追踪",
   "github": "cft0808/edict",
   "tags": ["multi-agent", "orchestration", "dashboard"],
-  "category": "multi-agent",
   "added": "2026-03-06",
   "type": "tool"
 }

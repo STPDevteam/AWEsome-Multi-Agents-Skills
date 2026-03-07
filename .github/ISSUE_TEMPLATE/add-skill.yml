@@ -37,20 +37,6 @@ body:
       required: true
 
   - type: dropdown
-    id: category
-    attributes:
-      label: Primary category
-      options:
-        - infrastructure (Infrastructure)
-        - multi-agent (Multi-Agent)
-        - visualization (Visualization & Tools)
-        - gtm (Go-to-Market)
-        - identity (Identity)
-        - payment (Payment)
-    validations:
-      required: true
-
-  - type: dropdown
     id: type
     attributes:
       label: Skill type
@@ -68,7 +54,7 @@ body:
     id: tags
     attributes:
       label: Tags (comma-separated)
-      description: See available tags in categories.json
+      description: Topic/capability tags; see categories.json for recommended tag groups
       placeholder: multi-agent, dashboard
     validations:
       required: true

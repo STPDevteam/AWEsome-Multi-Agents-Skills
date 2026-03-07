@@ -5,7 +5,6 @@
   "description_zh": "面向 Multi-Agent 协作的像素办公室状态看板，实时可视化 AI Agent 工作状态、历史记录与多人协作",
   "github": "ringhyacinth/Star-Office-UI",
   "tags": ["multi-agent", "visualization", "dashboard", "tooling"],
-  "category": "visualization",
   "added": "2026-03-06",
   "type": "tool"
 }

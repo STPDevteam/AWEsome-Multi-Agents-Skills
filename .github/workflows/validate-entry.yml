@@ -29,7 +29,6 @@ jobs:
 
       - name: Validate entry.json schema
         run: |
-          VALID_TYPES='["skill","mcp","agent","model","tool","other"]'
           for file in ${{ steps.changed.outputs.files }}; do
             echo "Validating $file..."
 
@@ -40,38 +39,39 @@ jobs:
             fi
 
             # Check required fields
-            python3 << 'EOF'
+            python3 <<EOF
           import json, sys, os
 
-          with open("$file") as f:
+          file = "$file"
+          with open(file) as f:
               data = json.load(f)
 
-          required = ["slug", "name", "description", "github", "tags", "category", "added", "type"]
-          missing = [f for f in required if f not in data or not data[f]]
+          required = ["slug", "name", "description", "github", "tags", "added", "type"]
+          missing = [field for field in required if field not in data or not data[field]]
           if missing:
-              print(f"::error file=$file::Missing required fields: {missing}")
+              print(f"::error file={file}::Missing required fields: {missing}")
               sys.exit(1)
 
-          # Validate type field
           valid_types = ["skill", "mcp", "agent", "model", "tool", "other"]
           if data.get("type") not in valid_types:
-              print(f"::error file=$file::type must be one of {valid_types}, got: {data.get('type')}")
+              print(f"::error file={file}::type must be one of {valid_types}, got: {data.get('type')}")
               sys.exit(1)
 
-          # Validate slug matches directory name
-          dir_slug = os.path.basename(os.path.dirname("$file"))
+          if not isinstance(data.get("tags"), list) or not all(isinstance(tag, str) and tag.strip() for tag in data["tags"]):
+              print(f"::error file={file}::tags must be a non-empty array of non-empty strings")
+              sys.exit(1)
+
+          dir_slug = os.path.basename(os.path.dirname(file))
           if data["slug"] != dir_slug:
-              print(f"::error file=$file::slug '{data['slug']}' must match directory name '{dir_slug}'")
+              print(f"::error file={file}::slug '{data['slug']}' must match directory name '{dir_slug}'")
               sys.exit(1)
 
-          # Validate description length (primary English, <= 120 chars)
           if len(data["description"]) > 120:
-              print(f"::warning file=$file::description is {len(data['description'])} chars, recommended <= 120")
+              print(f"::warning file={file}::description is {len(data['description'])} chars, recommended <= 120")
 
-          # Validate github format
           github = data["github"]
           if github.count("/") != 1 or github.startswith("https://"):
-              print(f"::error file=$file::github field must be 'owner/repo' format, got: {github}")
+              print(f"::error file={file}::github field must be 'owner/repo' format, got: {github}")
               sys.exit(1)
 
           print(f"✅ {data['slug']} - validation passed")

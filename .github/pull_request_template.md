@@ -4,7 +4,6 @@
 
 - **GitHub**:
 - **Description (English)**:
-- **Category**:
 - **Tags**:
 - **Type**: (skill | mcp | agent | model | tool | other)
 
@@ -18,7 +17,6 @@
   "description_zh": "",
   "github": "",
   "tags": [],
-  "category": "",
   "added": "",
   "type": "skill"
 }

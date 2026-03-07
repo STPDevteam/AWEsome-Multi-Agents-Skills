@@ -1,0 +1,10 @@
+{
+  "slug": "agency-agents",
+  "name": "agency-agents",
+  "description": "Collection of 55+ specialized AI agents across 9 divisions, with personality-driven workflows and Claude Code usage",
+  "description_zh": "收录 9 大分组、55+ 专业 AI Agent 的智能体合集，强调人格化流程与 Claude Code 使用场景",
+  "github": "msitarzewski/agency-agents",
+  "tags": ["multi-agent", "collaboration", "coordination"],
+  "added": "2026-03-07",
+  "type": "agent"
+}
