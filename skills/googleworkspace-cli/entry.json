@@ -1,0 +1,10 @@
+{
+  "slug": "googleworkspace-cli",
+  "name": "Google Workspace CLI",
+  "description": "One CLI for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin and more. Built from Google Discovery Service; includes AI agent skills",
+  "description_zh": "Drive、Gmail、Calendar、Sheets、Docs、Chat、Admin 等统一 CLI，含 AI Agent 技能",
+  "github": "googleworkspace/cli",
+  "tags": ["infrastructure", "cli", "tooling"],
+  "added": "2026-03-10",
+  "type": "tool"
+}

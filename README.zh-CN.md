@@ -3,7 +3,7 @@
 > 面向 Autonomous World / Multi-Agent 的开源 Skill 索引
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
-[![Skills](https://img.shields.io/badge/skills-11-brightgreen)](./skills/)
+[![Skills](https://img.shields.io/badge/skills-14-brightgreen)](./skills/)
 [![Dashboard](https://img.shields.io/badge/Dashboard-AWEsome%20Dashboard-blue)](https://awesome-dashboard-eight.vercel.app/)
 
 ## 关于
@@ -40,6 +40,18 @@ skills/
   类型：`skill`
   标签：`multi-agent`, `wallet`, `openclaw`, `skill`
   数据：[entry.json](./skills/privy-agentic-wallets-skill/entry.json)
+
+- **gtm-engineer-skills**: 提升网站 AEO/GEO 的 Claude Code 技能 — 16 项检查、6 大智能维度与框架级优化
+  仓库：[onvoyage-ai/gtm-engineer-skills](https://github.com/onvoyage-ai/gtm-engineer-skills)
+  类型：`skill`
+  标签：`gtm`, `tooling`, `distribution`
+  数据：[entry.json](./skills/gtm-engineer-skills/entry.json)
+
+- **obsidian-skills**: 面向 Obsidian 的 Agent 技能 — 让智能体使用 Markdown、Bases、JSON Canvas 与 CLI
+  仓库：[kepano/obsidian-skills](https://github.com/kepano/obsidian-skills)
+  类型：`skill`
+  标签：`tooling`, `multi-agent`, `infrastructure`
+  数据：[entry.json](./skills/obsidian-skills/entry.json)
 
 ## 框架
 
@@ -100,6 +112,12 @@ skills/
   类型：`tool`
   标签：`multi-agent`, `tooling`, `skill`, `cli`
   数据：[entry.json](./skills/vercel-skills/entry.json)
+
+- **Google Workspace CLI**: Drive、Gmail、Calendar、Sheets、Docs、Chat、Admin 等统一 CLI，含 AI Agent 技能
+  仓库：[googleworkspace/cli](https://github.com/googleworkspace/cli)
+  类型：`tool`
+  标签：`infrastructure`, `cli`, `tooling`
+  数据：[entry.json](./skills/googleworkspace-cli/entry.json)
 
 ---
 

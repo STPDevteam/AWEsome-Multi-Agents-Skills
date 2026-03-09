@@ -1,0 +1,10 @@
+{
+  "slug": "gtm-engineer-skills",
+  "name": "GTM Engineer Skills",
+  "description": "Claude Code skill for improving website AEO (AI Engine Optimization) and GEO (Generative Engine Optimization) — 16 checks, 6 intelligence dimensions, framework-specific fixes",
+  "description_zh": "提升网站 AEO/GEO 的 Claude Code 技能 — 16 项检查、6 大智能维度与框架级优化",
+  "github": "onvoyage-ai/gtm-engineer-skills",
+  "tags": ["gtm", "tooling", "distribution"],
+  "added": "2026-03-10",
+  "type": "skill"
+}

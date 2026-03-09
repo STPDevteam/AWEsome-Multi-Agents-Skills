@@ -3,7 +3,7 @@
 > Open-source Skill index for Autonomous World / Multi-Agent
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
-[![Skills](https://img.shields.io/badge/skills-11-brightgreen)](./skills/)
+[![Skills](https://img.shields.io/badge/skills-14-brightgreen)](./skills/)
 [![Dashboard](https://img.shields.io/badge/Dashboard-AWEsome%20Dashboard-blue)](https://awesome-dashboard-eight.vercel.app/)
 
 ## About
@@ -40,6 +40,18 @@ skills/
   Type: `skill`
   Tags: `multi-agent`, `wallet`, `openclaw`, `skill`
   Data: [entry.json](./skills/privy-agentic-wallets-skill/entry.json)
+
+- **gtm-engineer-skills**: Claude Code skill for improving website AEO (AI Engine Optimization) and GEO (Generative Engine Optimization) — 16 checks, 6 intelligence dimensions, framework-specific fixes
+  Repo: [onvoyage-ai/gtm-engineer-skills](https://github.com/onvoyage-ai/gtm-engineer-skills)
+  Type: `skill`
+  Tags: `gtm`, `tooling`, `distribution`
+  Data: [entry.json](./skills/gtm-engineer-skills/entry.json)
+
+- **obsidian-skills**: Agent skills for Obsidian — teach your agent to use Markdown, Bases, JSON Canvas, and the CLI
+  Repo: [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills)
+  Type: `skill`
+  Tags: `tooling`, `multi-agent`, `infrastructure`
+  Data: [entry.json](./skills/obsidian-skills/entry.json)
 
 ## Frameworks
 
@@ -100,6 +112,12 @@ skills/
   Type: `tool`
   Tags: `multi-agent`, `tooling`, `skill`, `cli`
   Data: [entry.json](./skills/vercel-skills/entry.json)
+
+- **Google Workspace CLI**: One CLI for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin and more. Built from Google Discovery Service; includes AI agent skills
+  Repo: [googleworkspace/cli](https://github.com/googleworkspace/cli)
+  Type: `tool`
+  Tags: `infrastructure`, `cli`, `tooling`
+  Data: [entry.json](./skills/googleworkspace-cli/entry.json)
 
 ---
 
