@@ -3,7 +3,7 @@
 > Open-source Skill index for Autonomous World / Multi-Agent
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
-[![Skills](https://img.shields.io/badge/skills-18-brightgreen)](./skills/)
+[![Skills](https://img.shields.io/badge/skills-19-brightgreen)](./skills/)
 [![Dashboard](https://img.shields.io/badge/Dashboard-AWEsome%20Dashboard-blue)](https://awesome-dashboard-eight.vercel.app/)
 
 ## About
@@ -78,6 +78,12 @@ skills/
   Type: `framework`
   Tags: `multi-agent`, `orchestration`, `python`, `collaboration`
   Data: [entry.json](./skills/crewai/entry.json) *(featured)*
+
+- **MiroFish**: A simple and universal swarm intelligence engine — predict anything with collective agent intelligence
+  Repo: [666ghj/MiroFish](https://github.com/666ghj/MiroFish)
+  Type: `framework`
+  Tags: `multi-agent`, `orchestration`, `tooling`
+  Data: [entry.json](./skills/mirofish/entry.json)
 
 ## Apps
 

@@ -3,7 +3,7 @@
 > 面向 Autonomous World / Multi-Agent 的开源 Skill 索引
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
-[![Skills](https://img.shields.io/badge/skills-18-brightgreen)](./skills/)
+[![Skills](https://img.shields.io/badge/skills-19-brightgreen)](./skills/)
 [![Dashboard](https://img.shields.io/badge/Dashboard-AWEsome%20Dashboard-blue)](https://awesome-dashboard-eight.vercel.app/)
 
 ## 关于
@@ -78,6 +78,12 @@ skills/
   类型：`framework`
   标签：`multi-agent`, `orchestration`, `python`, `collaboration`
   数据：[entry.json](./skills/crewai/entry.json) *(精选)*
+
+- **MiroFish**: 简洁通用的群体智能引擎，用集体智能预测万物
+  仓库：[666ghj/MiroFish](https://github.com/666ghj/MiroFish)
+  类型：`framework`
+  标签：`multi-agent`, `orchestration`, `tooling`
+  数据：[entry.json](./skills/mirofish/entry.json)
 
 ## 应用
 
