@@ -1,0 +1,10 @@
+{
+  "slug": "erc-8004-contracts",
+  "name": "ERC-8004 Contracts",
+  "description": "Registry contracts curated by the 8004 team — onchain registry infrastructure for agents and entities.",
+  "description_zh": "8004 团队维护的注册表合约 — 面向智能体与实体的链上注册基础设施",
+  "github": "erc-8004/erc-8004-contracts",
+  "tags": ["identity", "infrastructure", "protocol"],
+  "added": "2026-03-10",
+  "type": "protocol"
+}

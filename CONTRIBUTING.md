@@ -91,7 +91,7 @@ Maintainers can create the `entry.json` and update the index for you.
 | `github` | string | ✅ | `owner/repo`, without `https://github.com/` |
 | `tags` | string[] | ✅ | At least one topic/capability tag; see `tag-groups.json` |
 | `added` | string | ✅ | Date added, `YYYY-MM-DD` |
-| `type` | string | ✅ | Entry type: `skill`, `mcp`, `agent`, `framework`, `app`, `tool`, `model`, `other` |
+| `type` | string | ✅ | Entry type: `skill`, `mcp`, `agent`, `framework`, `app`, `tool`, `protocol`, `model`, `other` |
 | `featured` | boolean | — | Featured flag; default `false` |
 
 ## Recommended tags

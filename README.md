@@ -3,7 +3,7 @@
 > Open-source Skill index for Autonomous World / Multi-Agent
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
-[![Skills](https://img.shields.io/badge/skills-14-brightgreen)](./skills/)
+[![Skills](https://img.shields.io/badge/skills-17-brightgreen)](./skills/)
 [![Dashboard](https://img.shields.io/badge/Dashboard-AWEsome%20Dashboard-blue)](https://awesome-dashboard-eight.vercel.app/)
 
 ## About
@@ -12,7 +12,7 @@ AWEsome Multi-Agents Skills is a structured index of **Skills, tools, and relate
 
 **Data structure:** Each listed entry has an `entry.json` under [`skills/`](./skills/); the Dashboard reads from these files automatically. The index now uses:
 
-- `type` for **what the entry is**: `skill`, `mcp`, `agent`, `framework`, `app`, `tool`, `model`, `other`
+- `type` for **what the entry is**: `skill`, `mcp`, `agent`, `framework`, `app`, `tool`, `protocol`, `model`, `other`
 - `tags` for **what the entry is about**: topics, capabilities, and search terms
 
 ```text
@@ -52,6 +52,12 @@ skills/
   Type: `skill`
   Tags: `tooling`, `multi-agent`, `infrastructure`
   Data: [entry.json](./skills/obsidian-skills/entry.json)
+
+- **evolver (Capability Evolver)**: GEP-powered self-evolution engine for AI agents — protocol-constrained evolution, Genes/Capsules/Events, auditable traces. Core of EvoMap network (evomap.ai)
+  Repo: [EvoMap/evolver](https://github.com/EvoMap/evolver)
+  Type: `skill`
+  Tags: `multi-agent`, `openclaw`, `protocol`, `tooling`
+  Data: [entry.json](./skills/evolver/entry.json)
 
 ## Frameworks
 
@@ -118,6 +124,20 @@ skills/
   Type: `tool`
   Tags: `infrastructure`, `cli`, `tooling`
   Data: [entry.json](./skills/googleworkspace-cli/entry.json)
+
+## Protocols
+
+- **ERC-8004 Contracts**: Registry contracts curated by the 8004 team — onchain registry infrastructure for agents and entities
+  Repo: [erc-8004/erc-8004-contracts](https://github.com/erc-8004/erc-8004-contracts)
+  Type: `protocol`
+  Tags: `identity`, `infrastructure`, `protocol`
+  Data: [entry.json](./skills/erc-8004-contracts/entry.json)
+
+- **x402**: A payments protocol for the internet. Built on HTTP — pay-for-API, multi-network (crypto & fiat), minimal server/client integration
+  Repo: [coinbase/x402](https://github.com/coinbase/x402)
+  Type: `protocol`
+  Tags: `payment`, `protocol`, `infrastructure`
+  Data: [entry.json](./skills/x402/entry.json)
 
 ---
 

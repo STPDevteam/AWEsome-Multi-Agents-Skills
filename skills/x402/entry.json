@@ -1,0 +1,10 @@
+{
+  "slug": "x402",
+  "name": "x402",
+  "description": "A payments protocol for the internet. Built on HTTP — pay-for-API, multi-network (crypto & fiat), minimal server/client integration.",
+  "description_zh": "面向互联网的支付协议，基于 HTTP — 接口按次付费、多网络（加密与法币）、服务端与客户端集成极简",
+  "github": "coinbase/x402",
+  "tags": ["payment", "protocol", "infrastructure"],
+  "added": "2026-03-10",
+  "type": "protocol"
+}
