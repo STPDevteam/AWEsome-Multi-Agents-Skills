@@ -77,7 +77,7 @@ skills/
   Repo: [joaomdmoura/crewAI](https://github.com/joaomdmoura/crewAI)
   Type: `framework`
   Tags: `multi-agent`, `orchestration`, `python`, `collaboration`
-  Data: [entry.json](./skills/crewai/entry.json) *(featured)*
+  Data: [entry.json](./skills/crewai/entry.json)
 
 - **MiroFish**: A simple and universal swarm intelligence engine — predict anything with collective agent intelligence
   Repo: [666ghj/MiroFish](https://github.com/666ghj/MiroFish)

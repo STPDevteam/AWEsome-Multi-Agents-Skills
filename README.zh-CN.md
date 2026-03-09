@@ -77,7 +77,7 @@ skills/
   仓库：[joaomdmoura/crewAI](https://github.com/joaomdmoura/crewAI)
   类型：`framework`
   标签：`multi-agent`, `orchestration`, `python`, `collaboration`
-  数据：[entry.json](./skills/crewai/entry.json) *(精选)*
+  数据：[entry.json](./skills/crewai/entry.json)
 
 - **MiroFish**: 简洁通用的群体智能引擎，用集体智能预测万物
   仓库：[666ghj/MiroFish](https://github.com/666ghj/MiroFish)

@@ -52,7 +52,7 @@ jobs:
               print(f"::error file={file}::Missing required fields: {missing}")
               sys.exit(1)
 
-          valid_types = ["skill", "mcp", "agent", "model", "tool", "other"]
+          valid_types = ["skill", "mcp", "agent", "framework", "app", "tool", "protocol", "model", "other"]
           if data.get("type") not in valid_types:
               print(f"::error file={file}::type must be one of {valid_types}, got: {data.get('type')}")
               sys.exit(1)

@@ -5,7 +5,7 @@
 - **GitHub**:
 - **Description (English)**:
 - **Tags**:
-- **Type**: (skill | mcp | agent | model | tool | other)
+- **Type**: (skill | mcp | agent | framework | app | tool | protocol | model | other)
 
 ### entry.json preview
 

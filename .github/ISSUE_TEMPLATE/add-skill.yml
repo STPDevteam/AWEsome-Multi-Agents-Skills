@@ -46,8 +46,9 @@ body:
         - agent (Agent Pack / Collection)
         - framework (Framework / SDK)
         - app (Application / Platform)
-        - model (Model)
         - tool (Tool)
+        - protocol (Protocol / Infrastructure)
+        - model (Model)
         - other (Other)
     validations:
       required: true
