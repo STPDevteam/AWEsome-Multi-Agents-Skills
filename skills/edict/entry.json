@@ -3,7 +3,10 @@
   "name": "edict",
   "description": "Tang Dynasty-inspired Multi-Agent orchestration system — 9 specialized AI agents with real-time kanban dashboard, hot model switching, and full audit trails",
   "description_zh": "三省六部制 Multi-Agent 编排系统——9 个专职 AI Agent，配备实时军机处看板、模型热切换与完整审计追踪",
-  "github": "cft0808/edict",
+  "source": {
+    "kind": "github-repo",
+    "repo": "cft0808/edict"
+  },
   "tags": ["multi-agent", "orchestration", "dashboard"],
   "added": "2026-03-06",
   "type": "app"

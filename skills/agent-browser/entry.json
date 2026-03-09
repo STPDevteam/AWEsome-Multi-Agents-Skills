@@ -3,7 +3,10 @@
   "name": "agent-browser",
   "description": "Browser automation CLI for AI agents — drive real browsers from agents for navigation, forms, and screenshots.",
   "description_zh": "面向 AI 智能体的浏览器自动化 CLI，支持导航、填表与截图等能力",
-  "github": "vercel-labs/agent-browser",
+  "source": {
+    "kind": "github-repo",
+    "repo": "vercel-labs/agent-browser"
+  },
   "tags": ["multi-agent", "tooling", "automation", "cli"],
   "added": "2026-03-10",
   "type": "tool"

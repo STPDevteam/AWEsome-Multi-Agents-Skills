@@ -3,7 +3,10 @@
   "name": "Vercel Skills",
   "description": "The open agent skills tool — discover and add skills for AI agents via CLI (e.g. npx skills add). Official Vercel Labs skill registry.",
   "description_zh": "开源 Agent Skills 工具：通过 CLI（如 npx skills add）发现与安装智能体 Skill，Vercel Labs 官方技能注册表",
-  "github": "vercel-labs/skills",
+  "source": {
+    "kind": "github-repo",
+    "repo": "vercel-labs/skills"
+  },
   "tags": ["multi-agent", "tooling", "skill", "cli"],
   "added": "2026-03-10",
   "type": "tool"

@@ -3,7 +3,10 @@
   "name": "OpenMOSS",
   "description": "Self-organizing multi-agent platform for OpenClaw — planner, executor, reviewer, patrol; zero human intervention",
   "description_zh": "基于 OpenClaw 的自组织多智能体协作平台，规划、执行、评审、巡检全自动，零人工干预",
-  "github": "uluckyXH/OpenMOSS",
+  "source": {
+    "kind": "github-repo",
+    "repo": "uluckyXH/OpenMOSS"
+  },
   "tags": ["multi-agent", "orchestration", "collaboration", "dashboard"],
   "added": "2026-03-09",
   "type": "app"

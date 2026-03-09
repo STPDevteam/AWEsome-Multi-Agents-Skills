@@ -3,7 +3,10 @@
   "name": "CrewAI",
   "description": "Framework for orchestrating role-playing, autonomous AI agents to foster collaborative intelligence.",
   "description_zh": "用于编排角色扮演、自主AI智能体以促进协作智能的框架。",
-  "github": "joaomdmoura/crewAI",
+  "source": {
+    "kind": "github-repo",
+    "repo": "joaomdmoura/crewAI"
+  },
   "tags": ["multi-agent", "orchestration", "python", "collaboration"],
   "added": "2026-03-10",
   "type": "framework",

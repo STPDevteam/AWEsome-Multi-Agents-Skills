@@ -3,7 +3,10 @@
   "name": "Capability Evolver",
   "description": "GEP-powered self-evolution engine for AI agents. Protocol-constrained evolution with Genes/Capsules/Events, auditable traces. Core of EvoMap network.",
   "description_zh": "基于 GEP 的 AI 智能体自进化引擎：协议约束的进化、Genes/Capsules/Events、可审计链路，EvoMap 网络核心",
-  "github": "EvoMap/evolver",
+  "source": {
+    "kind": "github-repo",
+    "repo": "EvoMap/evolver"
+  },
   "tags": ["multi-agent", "openclaw", "protocol", "tooling"],
   "added": "2026-03-10",
   "type": "skill"

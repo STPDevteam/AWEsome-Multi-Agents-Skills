@@ -3,7 +3,10 @@
   "name": "Obsidian Skills",
   "description": "Agent skills for Obsidian — teach your agent to use Markdown, Bases, JSON Canvas, and the CLI",
   "description_zh": "面向 Obsidian 的 Agent 技能 — 让智能体使用 Markdown、Bases、JSON Canvas 与 CLI",
-  "github": "kepano/obsidian-skills",
+  "source": {
+    "kind": "github-repo",
+    "repo": "kepano/obsidian-skills"
+  },
   "tags": ["tooling", "multi-agent", "infrastructure"],
   "added": "2026-03-10",
   "type": "skill"
