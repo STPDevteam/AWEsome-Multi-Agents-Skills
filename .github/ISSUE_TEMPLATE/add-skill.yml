@@ -43,7 +43,9 @@ body:
       options:
         - skill (General Skill)
         - mcp (MCP Service)
-        - agent (Agent Framework)
+        - agent (Agent Pack / Collection)
+        - framework (Framework / SDK)
+        - app (Application / Platform)
         - model (Model)
         - tool (Tool)
         - other (Other)
@@ -54,7 +56,7 @@ body:
     id: tags
     attributes:
       label: Tags (comma-separated)
-      description: Topic/capability tags; see categories.json for recommended tag groups
+      description: Topic/capability tags; see tag-groups.json for recommended tag groups
       placeholder: multi-agent, dashboard
     validations:
       required: true

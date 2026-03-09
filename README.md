@@ -3,7 +3,7 @@
 > Open-source Skill index for Autonomous World / Multi-Agent
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
-[![Skills](https://img.shields.io/badge/skills-3-brightgreen)](./skills/)
+[![Skills](https://img.shields.io/badge/skills-7-brightgreen)](./skills/)
 [![Dashboard](https://img.shields.io/badge/Dashboard-AWEsome%20Dashboard-blue)](https://awesome-dashboard-eight.vercel.app/)
 
 ## About
@@ -12,7 +12,7 @@ AWEsome Multi-Agents Skills is a structured index of **Skills, tools, and relate
 
 **Data structure:** Each listed entry has an `entry.json` under [`skills/`](./skills/); the Dashboard reads from these files automatically. The index now uses:
 
-- `type` for **what the entry is**: `skill`, `mcp`, `agent`, `model`, `tool`, `other`
+- `type` for **what the entry is**: `skill`, `mcp`, `agent`, `framework`, `app`, `tool`, `model`, `other`
 - `tags` for **what the entry is about**: topics, capabilities, and search terms
 
 ```text
@@ -33,19 +33,47 @@ skills/
   Tags: `multi-agent`, `collaboration`, `coordination`
   Data: [entry.json](./skills/agency-agents/entry.json)
 
-## Tools
+## Frameworks
+
+- **AgentKit**: Coinbase's framework for AI agents with wallet and onchain capabilities — every AI agent deserves a wallet
+  Repo: [coinbase/agentkit](https://github.com/coinbase/agentkit)
+  Type: `framework`
+  Tags: `multi-agent`, `tooling`, `infrastructure`
+  Data: [entry.json](./skills/agentkit/entry.json)
+
+- **CrewAI**: Framework for orchestrating role-playing, autonomous AI agents to foster collaborative intelligence. One of the most popular multi-agent orchestration frameworks in the Python ecosystem.
+  Repo: [joaomdmoura/crewAI](https://github.com/joaomdmoura/crewAI)
+  Type: `framework`
+  Tags: `multi-agent`, `orchestration`, `python`, `collaboration`
+  Data: [entry.json](./skills/crewai/entry.json) *(featured)*
+
+## Apps
 
 - **edict**: Tang Dynasty-inspired multi-agent orchestration with 9 specialized AI agents and a real-time kanban
   Repo: [cft0808/edict](https://github.com/cft0808/edict)
-  Type: `tool`
+  Type: `app`
   Tags: `multi-agent`, `orchestration`, `dashboard`
   Data: [entry.json](./skills/edict/entry.json)
 
 - **star-office-ui**: Pixel office dashboard for multi-agent collaboration and agent state visualization
   Repo: [ringhyacinth/Star-Office-UI](https://github.com/ringhyacinth/Star-Office-UI)
-  Type: `tool`
+  Type: `app`
   Tags: `multi-agent`, `visualization`, `dashboard`, `tooling`
   Data: [entry.json](./skills/star-office-ui/entry.json)
+
+- **OpenMOSS**: Self-organizing multi-agent platform for OpenClaw — planner, executor, reviewer, patrol; zero human intervention
+  Repo: [uluckyXH/OpenMOSS](https://github.com/uluckyXH/OpenMOSS)
+  Type: `app`
+  Tags: `multi-agent`, `orchestration`, `collaboration`, `dashboard`
+  Data: [entry.json](./skills/openmoss/entry.json)
+
+## Tools
+
+- **agent-browser**: Browser automation CLI for AI agents — drive real browsers for navigation, forms, and screenshots
+  Repo: [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser)
+  Type: `tool`
+  Tags: `multi-agent`, `tooling`, `automation`, `cli`
+  Data: [entry.json](./skills/agent-browser/entry.json)
 
 ---
 
@@ -58,7 +86,7 @@ The Dashboard and tooling consume this repo as follows:
 GET https://raw.githubusercontent.com/STPDevteam/AWEsome-Multi-Agents-Skills/main/skills/<slug>/entry.json
 
 # Fetch recommended tag groups
-GET https://raw.githubusercontent.com/STPDevteam/AWEsome-Multi-Agents-Skills/main/categories.json
+GET https://raw.githubusercontent.com/STPDevteam/AWEsome-Multi-Agents-Skills/main/tag-groups.json
 ```
 
 **entry.json** field reference:
@@ -70,14 +98,14 @@ GET https://raw.githubusercontent.com/STPDevteam/AWEsome-Multi-Agents-Skills/mai
   "description": "English description",  // primary description, ≤ 120 chars
   "description_zh": "中文描述",            // optional; for Chinese users & AI search, ≤ 80 chars
   "github": "owner/repo",                // repo path (no https://github.com/)
-  "tags": ["multi-agent", "tooling"],    // topic/capability tags; see categories.json
+  "tags": ["multi-agent", "tooling"],    // topic/capability tags; see tag-groups.json
   "added": "2026-03-06",                 // date added YYYY-MM-DD
-  "type": "tool",                        // what the entry is
+  "type": "framework",                   // what the entry is
   "featured": false                      // featured flag (optional, default false)
 }
 ```
 
-**`categories.json`** is retained as a **recommended tag-group dictionary** for humans and tooling. Entries do **not** need a `category` field anymore.
+**`tag-groups.json`** is retained as a **recommended tag-group dictionary** for humans and tooling. Entries do **not** need a `category` field anymore.
 
 ---
 
@@ -101,7 +129,7 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
 ## Links
 
 - [Dashboard](https://awesome-dashboard-eight.vercel.app/) – Web UI
-- [categories.json](./categories.json) – Recommended tag groups
+- [tag-groups.json](./tag-groups.json) – Recommended tag groups
 
 ## License
 

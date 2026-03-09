@@ -1,0 +1,10 @@
+{
+  "slug": "agentkit",
+  "name": "AgentKit",
+  "description": "Coinbase's framework for AI agents with wallet and onchain capabilities — every AI agent deserves a wallet",
+  "description_zh": "Coinbase 的 AI 智能体框架，为智能体提供钱包与链上能力",
+  "github": "coinbase/agentkit",
+  "tags": ["multi-agent", "tooling", "infrastructure"],
+  "added": "2026-03-09",
+  "type": "framework"
+}

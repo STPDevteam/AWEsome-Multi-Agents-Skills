@@ -18,7 +18,7 @@ AWEsome-Multi-Agents-Skills/
 │   │   └── entry.json
 │   └── star-office-ui/
 │       └── entry.json
-├── categories.json
+├── tag-groups.json
 ├── README.md
 └── CONTRIBUTING.md
 ```
@@ -89,14 +89,14 @@ Maintainers can create the `entry.json` and update the index for you.
 | `description` | string | ✅ | **Primary (English) description**, ≤ 120 chars |
 | `description_zh` | string | — | **Optional Chinese description**, ≤ 80 chars |
 | `github` | string | ✅ | `owner/repo`, without `https://github.com/` |
-| `tags` | string[] | ✅ | At least one topic/capability tag; see `categories.json` |
+| `tags` | string[] | ✅ | At least one topic/capability tag; see `tag-groups.json` |
 | `added` | string | ✅ | Date added, `YYYY-MM-DD` |
-| `type` | string | ✅ | Entry type: `skill`, `mcp`, `agent`, `model`, `tool`, `other` |
+| `type` | string | ✅ | Entry type: `skill`, `mcp`, `agent`, `framework`, `app`, `tool`, `model`, `other` |
 | `featured` | boolean | — | Featured flag; default `false` |
 
 ## Recommended tags
 
-See [`categories.json`](./categories.json) for recommended tag groups. Summary:
+See [`tag-groups.json`](./tag-groups.json) for recommended tag groups. Summary:
 
 | Tag group | Example tags |
 |----------|----------------|
