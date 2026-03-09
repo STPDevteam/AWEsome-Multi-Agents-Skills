@@ -3,7 +3,7 @@
 > Open-source Skill index for Autonomous World / Multi-Agent
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
-[![Skills](https://img.shields.io/badge/skills-17-brightgreen)](./skills/)
+[![Skills](https://img.shields.io/badge/skills-18-brightgreen)](./skills/)
 [![Dashboard](https://img.shields.io/badge/Dashboard-AWEsome%20Dashboard-blue)](https://awesome-dashboard-eight.vercel.app/)
 
 ## About
@@ -58,6 +58,12 @@ skills/
   Type: `skill`
   Tags: `multi-agent`, `openclaw`, `protocol`, `tooling`
   Data: [entry.json](./skills/evolver/entry.json)
+
+- **agent-skills-on-base**: Curated Agent Skills for building AI agents on Base — infrastructure, wallets, token launch, DeFi, social, and more
+  Repo: [basezh/agent-skills-on-base](https://github.com/basezh/agent-skills-on-base)
+  Type: `skill`
+  Tags: `multi-agent`, `wallet`, `infrastructure`
+  Data: [entry.json](./skills/agent-skills-on-base/entry.json)
 
 ## Frameworks
 

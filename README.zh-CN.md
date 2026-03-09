@@ -3,7 +3,7 @@
 > 面向 Autonomous World / Multi-Agent 的开源 Skill 索引
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
-[![Skills](https://img.shields.io/badge/skills-17-brightgreen)](./skills/)
+[![Skills](https://img.shields.io/badge/skills-18-brightgreen)](./skills/)
 [![Dashboard](https://img.shields.io/badge/Dashboard-AWEsome%20Dashboard-blue)](https://awesome-dashboard-eight.vercel.app/)
 
 ## 关于
@@ -58,6 +58,12 @@ skills/
   类型：`skill`
   标签：`multi-agent`, `openclaw`, `protocol`, `tooling`
   数据：[entry.json](./skills/evolver/entry.json)
+
+- **agent-skills-on-base**: 面向 Base 的精选 Agent Skills：基础设施、钱包、发币、DeFi、社交等，用于在 Base 上构建 AI 智能体
+  仓库：[basezh/agent-skills-on-base](https://github.com/basezh/agent-skills-on-base)
+  类型：`skill`
+  标签：`multi-agent`, `wallet`, `infrastructure`
+  数据：[entry.json](./skills/agent-skills-on-base/entry.json)
 
 ## 框架
 
