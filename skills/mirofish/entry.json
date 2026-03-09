@@ -3,7 +3,10 @@
   "name": "MiroFish",
   "description": "A simple and universal swarm intelligence engine — predict anything with collective agent intelligence.",
   "description_zh": "简洁通用的群体智能引擎，用集体智能预测万物",
-  "github": "666ghj/MiroFish",
+  "source": {
+    "kind": "github-repo",
+    "repo": "666ghj/MiroFish"
+  },
   "tags": ["multi-agent", "orchestration", "tooling"],
   "added": "2026-03-10",
   "type": "framework"

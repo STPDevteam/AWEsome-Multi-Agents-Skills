@@ -38,15 +38,16 @@ jobs:
               exit 1
             fi
 
-            # Check required fields
+            # Check required fields and source schema
             python3 <<EOF
           import json, sys, os
+          from urllib.parse import urlparse
 
           file = "$file"
           with open(file) as f:
               data = json.load(f)
 
-          required = ["slug", "name", "description", "github", "tags", "added", "type"]
+          required = ["slug", "name", "description", "tags", "added", "type"]
           missing = [field for field in required if field not in data or not data[field]]
           if missing:
               print(f"::error file={file}::Missing required fields: {missing}")
@@ -69,43 +70,134 @@ jobs:
           if len(data["description"]) > 120:
               print(f"::warning file={file}::description is {len(data['description'])} chars, recommended <= 120")
 
-          github = data["github"]
-          if github.count("/") != 1 or github.startswith("https://"):
-              print(f"::error file={file}::github field must be 'owner/repo' format, got: {github}")
+          if "description_zh" in data and len(data["description_zh"]) > 80:
+              print(f"::warning file={file}::description_zh is {len(data['description_zh'])} chars, recommended <= 80")
+
+          def validate_repo(repo, field_name):
+              if not isinstance(repo, str) or repo.count("/") != 1 or repo.startswith("https://"):
+                  print(f"::error file={file}::{field_name} must be 'owner/repo' format, got: {repo}")
+                  sys.exit(1)
+
+          source = data.get("source")
+          legacy_github = data.get("github")
+          if source:
+              if not isinstance(source, dict):
+                  print(f"::error file={file}::source must be an object")
+                  sys.exit(1)
+
+              kind = source.get("kind")
+              if kind == "github-repo":
+                  validate_repo(source.get("repo"), "source.repo")
+              elif kind == "clawhub-skill":
+                  site = source.get("site")
+                  slug = source.get("slug")
+                  url = source.get("url")
+
+                  if site != "clawhub.ai":
+                      print(f"::error file={file}::clawhub-skill source.site must be 'clawhub.ai', got: {site}")
+                      sys.exit(1)
+                  if not isinstance(slug, str) or not slug.strip():
+                      print(f"::error file={file}::clawhub-skill source.slug is required")
+                      sys.exit(1)
+                  if not isinstance(url, str) or not url.startswith("https://"):
+                      print(f"::error file={file}::clawhub-skill source.url must be an https URL")
+                      sys.exit(1)
+
+                  parsed = urlparse(url)
+                  if parsed.netloc not in {"clawhub.ai", "www.clawhub.ai"}:
+                      print(f"::error file={file}::clawhub-skill source.url must point to clawhub.ai, got: {url}")
+                      sys.exit(1)
+              else:
+                  print(f"::error file={file}::source.kind must be one of ['github-repo', 'clawhub-skill'], got: {kind}")
+                  sys.exit(1)
+          elif legacy_github:
+              validate_repo(legacy_github, "github")
+          else:
+              print(f"::error file={file}::Missing canonical source. Use source for new entries or github for legacy entries.")
               sys.exit(1)
+
+          upstream = data.get("upstream")
+          if upstream is not None:
+              if not isinstance(upstream, dict):
+                  print(f"::error file={file}::upstream must be an object when present")
+                  sys.exit(1)
+              if upstream.get("kind") != "github-repo":
+                  print(f"::error file={file}::upstream.kind must be 'github-repo' when present")
+                  sys.exit(1)
+              validate_repo(upstream.get("repo"), "upstream.repo")
 
           print(f"✅ {data['slug']} - validation passed")
           EOF
           done
 
-      - name: Check GitHub repo accessibility
+      - name: Check external source accessibility
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           for file in ${{ steps.changed.outputs.files }}; do
-            GITHUB=$(python3 -c "import json; print(json.load(open('$file'))['github'])")
-            OWNER=$(echo $GITHUB | cut -d'/' -f1)
-            REPO=$(echo $GITHUB | cut -d'/' -f2)
+            python3 <<EOF > /tmp/entry_refs.txt
+          import json
 
-            echo "Checking https://github.com/$GITHUB ..."
+          with open("$file") as f:
+              data = json.load(f)
 
-            STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
-              -H "Authorization: token $GITHUB_TOKEN" \
-              "https://api.github.com/repos/$OWNER/$REPO")
+          refs = []
+          source = data.get("source")
+          if source:
+              if source.get("kind") == "github-repo":
+                  refs.append(("github", source["repo"], "source.repo"))
+              elif source.get("kind") == "clawhub-skill":
+                  refs.append(("clawhub", source["url"], "source.url"))
+          elif data.get("github"):
+              refs.append(("github", data["github"], "github"))
 
-            if [ "$STATUS" != "200" ]; then
-              echo "::error file=$file::GitHub repo $GITHUB is not accessible (HTTP $STATUS)"
-              exit 1
-            fi
+          upstream = data.get("upstream")
+          if upstream and upstream.get("kind") == "github-repo":
+              refs.append(("github", upstream["repo"], "upstream.repo"))
 
-            # Check SKILL.md exists
-            SKILL_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
-              -H "Authorization: token $GITHUB_TOKEN" \
-              "https://api.github.com/repos/$OWNER/$REPO/contents/SKILL.md")
+          for ref in refs:
+              print("\t".join(ref))
+          EOF
 
-            if [ "$SKILL_STATUS" != "200" ]; then
-              echo "::warning file=$file::SKILL.md not found in $GITHUB root — recommended but not required"
-            fi
+            while IFS=$'\t' read -r kind value label; do
+              if [ -z "$kind" ]; then
+                continue
+              fi
 
-            echo "✅ $GITHUB is accessible"
+              if [ "$kind" = "github" ]; then
+                OWNER=$(echo "$value" | cut -d'/' -f1)
+                REPO=$(echo "$value" | cut -d'/' -f2)
+
+                echo "Checking https://github.com/$value ..."
+
+                STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+                  -H "Authorization: token $GITHUB_TOKEN" \
+                  "https://api.github.com/repos/$OWNER/$REPO")
+
+                if [ "$STATUS" != "200" ]; then
+                  echo "::error file=$file::$label repo $value is not accessible (HTTP $STATUS)"
+                  exit 1
+                fi
+
+                SKILL_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+                  -H "Authorization: token $GITHUB_TOKEN" \
+                  "https://api.github.com/repos/$OWNER/$REPO/contents/SKILL.md")
+
+                if [ "$SKILL_STATUS" != "200" ]; then
+                  echo "::warning file=$file::SKILL.md not found in $value root — recommended but not required"
+                fi
+
+                echo "✅ $value is accessible"
+              elif [ "$kind" = "clawhub" ]; then
+                echo "Checking $value ..."
+
+                STATUS=$(curl -L -s -o /dev/null -w "%{http_code}" "$value")
+                if [ "$STATUS" != "200" ]; then
+                  echo "::error file=$file::$label URL is not accessible (HTTP $STATUS): $value"
+                  exit 1
+                fi
+
+                echo "✅ $value is accessible"
+              fi
+            done < /tmp/entry_refs.txt
           done

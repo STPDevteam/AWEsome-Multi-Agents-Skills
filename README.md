@@ -3,7 +3,7 @@
 > Open-source Skill index for Autonomous World / Multi-Agent
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
-[![Skills](https://img.shields.io/badge/skills-19-brightgreen)](./skills/)
+[![Skills](https://img.shields.io/badge/skills-20-brightgreen)](./skills/)
 [![Dashboard](https://img.shields.io/badge/Dashboard-AWEsome%20Dashboard-blue)](https://awesome-dashboard-eight.vercel.app/)
 
 ## About
@@ -12,6 +12,8 @@ AWEsome Multi-Agents Skills is a structured index of **Skills, tools, and relate
 
 **Data structure:** Each listed entry has an `entry.json` under [`skills/`](./skills/); the Dashboard reads from these files automatically. The index now uses:
 
+- `source` for the **canonical listing source**: for example a GitHub repo or a ClawHub skill page
+- `upstream` for an **optional upstream repo** when the canonical source is a registry page
 - `type` for **what the entry is**: `skill`, `mcp`, `agent`, `framework`, `app`, `tool`, `protocol`, `model`, `other`
 - `tags` for **what the entry is about**: topics, capabilities, and search terms
 
@@ -21,7 +23,7 @@ skills/
     └── entry.json   ← machine-readable structured data
 ```
 
-> If an entry is a Skill, its actual `SKILL.md` usually lives in **that project's repo root**; this repo only maintains the index.
+> If an entry is a Skill, its actual `SKILL.md` usually lives in the upstream project repo or registry listing; this repo only maintains the index.
 
 ---
 
@@ -64,6 +66,12 @@ skills/
   Type: `skill`
   Tags: `multi-agent`, `wallet`, `infrastructure`
   Data: [entry.json](./skills/agent-skills-on-base/entry.json)
+
+- **Clawhub Skill Creator**: ClawHub-native skill for creating and packaging new ClawHub skills for publishing workflows
+  Source: [clawhub.ai/skills/clawhub-skill-creator](https://clawhub.ai/skills/clawhub-skill-creator)
+  Type: `skill`
+  Tags: `multi-agent`, `tooling`, `skill`
+  Data: [entry.json](./skills/clawhub-skill-creator/entry.json)
 
 ## Frameworks
 
@@ -169,16 +177,32 @@ GET https://raw.githubusercontent.com/STPDevteam/AWEsome-Multi-Agents-Skills/mai
 
 ```jsonc
 {
-  "slug": "your-skill-name",             // unique id, same as directory name
-  "name": "your-skill-name",             // display name
-  "description": "English description",  // primary description, ≤ 120 chars
-  "description_zh": "中文描述",            // optional; for Chinese users & AI search, ≤ 80 chars
-  "github": "owner/repo",                // repo path (no https://github.com/)
-  "tags": ["multi-agent", "tooling"],    // topic/capability tags; see tag-groups.json
-  "added": "2026-03-06",                 // date added YYYY-MM-DD
-  "type": "framework"                    // what the entry is
+  "slug": "your-skill-name",              // unique id, same as directory name
+  "name": "your-skill-name",              // display name
+  "description": "English description",   // primary description, ≤ 120 chars
+  "description_zh": "中文描述",             // optional; for Chinese users & AI search, ≤ 80 chars
+  "source": {                             // canonical source for this entry
+    "kind": "github-repo",                // or "clawhub-skill"
+    "repo": "owner/repo"
+  },
+  "upstream": {                           // optional, useful for registry-native sources
+    "kind": "github-repo",
+    "repo": "owner/repo"
+  },
+  "tags": ["multi-agent", "tooling"],     // topic/capability tags; see tag-groups.json
+  "added": "2026-03-06",                  // date added YYYY-MM-DD
+  "type": "framework"                     // what the entry is
 }
 ```
+
+Supported `source.kind` values:
+
+- `github-repo`: use `source.repo = "owner/repo"`
+- `clawhub-skill`: use `source.site`, `source.slug`, `source.url`; `source.owner` is optional for owner-scoped ClawHub URLs
+
+Legacy compatibility:
+
+- Existing entries using top-level `github` are still accepted for now, but new submissions should use `source`
 
 **`tag-groups.json`** is retained as a **recommended tag-group dictionary** for humans and tooling. Entries do **not** need a `category` field anymore.
 
@@ -190,8 +214,9 @@ GET https://raw.githubusercontent.com/STPDevteam/AWEsome-Multi-Agents-Skills/mai
 
 1. Fork this repo.
 2. Create `entry.json` under `skills/<your-slug>/`.
-3. Open a PR with title: `feat: add <your-skill-name>`.
-4. After merge, the Dashboard will include it on the next build.
+3. Use the structured `source` object for new entries. Keep top-level `github` only for legacy compatibility.
+4. Open a PR with title: `feat: add <your-skill-name>`.
+5. After merge, the Dashboard will include it on the next build.
 
 ### Option 2: Issue
 

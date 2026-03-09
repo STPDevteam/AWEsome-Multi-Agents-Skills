@@ -1,0 +1,15 @@
+{
+  "slug": "clawhub-skill-creator",
+  "name": "Clawhub Skill Creator",
+  "description": "ClawHub-native skill for creating and packaging new ClawHub skills for publishing workflows.",
+  "description_zh": "ClawHub 原生的技能创建工具，用于生成并打包可发布到 ClawHub 的 skill",
+  "source": {
+    "kind": "clawhub-skill",
+    "site": "clawhub.ai",
+    "slug": "clawhub-skill-creator",
+    "url": "https://clawhub.ai/skills/clawhub-skill-creator"
+  },
+  "tags": ["multi-agent", "tooling", "skill"],
+  "added": "2026-03-10",
+  "type": "skill"
+}

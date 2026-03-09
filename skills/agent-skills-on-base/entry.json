@@ -3,7 +3,10 @@
   "name": "agent-skills-on-base",
   "description": "Curated Agent Skills for building AI agents on Base — infrastructure, wallets, token launch, DeFi, social, and more.",
   "description_zh": "面向 Base 的精选 Agent Skills：基础设施、钱包、发币、DeFi、社交等，用于在 Base 上构建 AI 智能体",
-  "github": "basezh/agent-skills-on-base",
+  "source": {
+    "kind": "github-repo",
+    "repo": "basezh/agent-skills-on-base"
+  },
   "tags": ["multi-agent", "wallet", "infrastructure"],
   "added": "2026-03-10",
   "type": "skill"
