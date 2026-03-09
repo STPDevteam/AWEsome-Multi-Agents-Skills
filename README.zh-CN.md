@@ -176,8 +176,7 @@ GET https://raw.githubusercontent.com/STPDevteam/AWEsome-Multi-Agents-Skills/mai
   "github": "owner/repo",                // 仓库路径（不要带 https://github.com/）
   "tags": ["multi-agent", "tooling"],    // 主题/能力标签；可参考 tag-groups.json
   "added": "2026-03-06",                 // 添加日期 YYYY-MM-DD
-  "type": "framework",                   // 条目类型
-  "featured": false                      // 是否精选（可选，默认 false）
+  "type": "framework"                    // 条目类型
 }
 ```
 

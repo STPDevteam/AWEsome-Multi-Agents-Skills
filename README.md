@@ -176,8 +176,7 @@ GET https://raw.githubusercontent.com/STPDevteam/AWEsome-Multi-Agents-Skills/mai
   "github": "owner/repo",                // repo path (no https://github.com/)
   "tags": ["multi-agent", "tooling"],    // topic/capability tags; see tag-groups.json
   "added": "2026-03-06",                 // date added YYYY-MM-DD
-  "type": "framework",                   // what the entry is
-  "featured": false                      // featured flag (optional, default false)
+  "type": "framework"                    // what the entry is
 }
 ```
 
