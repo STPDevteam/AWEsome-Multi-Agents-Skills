@@ -3,7 +3,7 @@
 > 面向 Autonomous World / Multi-Agent 的开源 Skill 索引
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
-[![Skills](https://img.shields.io/badge/skills-7-brightgreen)](./skills/)
+[![Skills](https://img.shields.io/badge/skills-11-brightgreen)](./skills/)
 [![Dashboard](https://img.shields.io/badge/Dashboard-AWEsome%20Dashboard-blue)](https://awesome-dashboard-eight.vercel.app/)
 
 ## 关于
@@ -32,6 +32,14 @@ skills/
   类型：`agent`
   标签：`multi-agent`, `collaboration`, `coordination`
   数据：[entry.json](./skills/agency-agents/entry.json)
+
+## Skills
+
+- **privy-agentic-wallets-skill**: 面向 OpenClaw 的 Privy 智能体钱包 Skill，为 AI 智能体提供基于 Privy 的钱包与链上能力
+  仓库：[privy-io/privy-agentic-wallets-skill](https://github.com/privy-io/privy-agentic-wallets-skill)
+  类型：`skill`
+  标签：`multi-agent`, `wallet`, `openclaw`, `skill`
+  数据：[entry.json](./skills/privy-agentic-wallets-skill/entry.json)
 
 ## 框架
 
@@ -67,6 +75,18 @@ skills/
   标签：`multi-agent`, `orchestration`, `collaboration`, `dashboard`
   数据：[entry.json](./skills/openmoss/entry.json)
 
+- **Claw Arena**: 面向 OpenClaw 的智能体原生游戏：像素风竞技场，智能体对战、下注代币、派发任务，支持浏览器与 OpenClaw API
+  仓库：[aikoooly/Claw-Arena](https://github.com/aikoooly/Claw-Arena)
+  类型：`app`
+  标签：`multi-agent`, `openclaw`, `game`, `visualization`
+  数据：[entry.json](./skills/claw-arena/entry.json)
+
+- **ClawPort**: 面向 OpenClaw 的开源智能体指挥中心：组织图、对话（视觉/语音）、看板、Cron 监控、成本统计、活动控制台与记忆浏览
+  仓库：[JohnRiceML/clawport-ui](https://github.com/JohnRiceML/clawport-ui)
+  类型：`app`
+  标签：`multi-agent`, `openclaw`, `dashboard`, `visualization`
+  数据：[entry.json](./skills/clawport-ui/entry.json)
+
 ## 工具
 
 - **agent-browser**: 面向 AI 智能体的浏览器自动化 CLI，支持导航、填表与截图等能力
@@ -74,6 +94,12 @@ skills/
   类型：`tool`
   标签：`multi-agent`, `tooling`, `automation`, `cli`
   数据：[entry.json](./skills/agent-browser/entry.json)
+
+- **Vercel Skills**: 开源 Agent Skills 工具：通过 CLI（如 npx skills add）发现与安装智能体 Skill，Vercel Labs 官方技能注册表
+  仓库：[vercel-labs/skills](https://github.com/vercel-labs/skills)
+  类型：`tool`
+  标签：`multi-agent`, `tooling`, `skill`, `cli`
+  数据：[entry.json](./skills/vercel-skills/entry.json)
 
 ---
 

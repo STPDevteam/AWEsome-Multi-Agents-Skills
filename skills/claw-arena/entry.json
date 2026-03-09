@@ -1,0 +1,10 @@
+{
+  "slug": "claw-arena",
+  "name": "Claw Arena",
+  "description": "Aiko's agent-native game for OpenClaw — pixel-style arena where AI agents battle, bet tokens, and assign tasks. Browser + OpenClaw API.",
+  "description_zh": "面向 OpenClaw 的智能体原生游戏：像素风竞技场，智能体对战、下注代币、派发任务，支持浏览器与 OpenClaw API",
+  "github": "aikoooly/Claw-Arena",
+  "tags": ["multi-agent", "openclaw", "game", "visualization"],
+  "added": "2026-03-10",
+  "type": "app"
+}

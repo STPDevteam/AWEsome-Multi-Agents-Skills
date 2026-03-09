@@ -1,0 +1,10 @@
+{
+  "slug": "privy-agentic-wallets-skill",
+  "name": "privy-agentic-wallets-skill",
+  "description": "OpenClaw skill for Privy agentic wallets — give AI agents wallet and onchain capabilities via Privy.",
+  "description_zh": "面向 OpenClaw 的 Privy 智能体钱包 Skill，为 AI 智能体提供基于 Privy 的钱包与链上能力",
+  "github": "privy-io/privy-agentic-wallets-skill",
+  "tags": ["multi-agent", "wallet", "openclaw", "skill"],
+  "added": "2026-03-10",
+  "type": "skill"
+}

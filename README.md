@@ -3,7 +3,7 @@
 > Open-source Skill index for Autonomous World / Multi-Agent
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
-[![Skills](https://img.shields.io/badge/skills-7-brightgreen)](./skills/)
+[![Skills](https://img.shields.io/badge/skills-11-brightgreen)](./skills/)
 [![Dashboard](https://img.shields.io/badge/Dashboard-AWEsome%20Dashboard-blue)](https://awesome-dashboard-eight.vercel.app/)
 
 ## About
@@ -32,6 +32,14 @@ skills/
   Type: `agent`
   Tags: `multi-agent`, `collaboration`, `coordination`
   Data: [entry.json](./skills/agency-agents/entry.json)
+
+## Skills
+
+- **privy-agentic-wallets-skill**: OpenClaw skill for Privy agentic wallets — give AI agents wallet and onchain capabilities via Privy
+  Repo: [privy-io/privy-agentic-wallets-skill](https://github.com/privy-io/privy-agentic-wallets-skill)
+  Type: `skill`
+  Tags: `multi-agent`, `wallet`, `openclaw`, `skill`
+  Data: [entry.json](./skills/privy-agentic-wallets-skill/entry.json)
 
 ## Frameworks
 
@@ -67,6 +75,18 @@ skills/
   Tags: `multi-agent`, `orchestration`, `collaboration`, `dashboard`
   Data: [entry.json](./skills/openmoss/entry.json)
 
+- **Claw Arena**: Aiko's agent-native game for OpenClaw — pixel-style arena where AI agents battle, bet tokens, and assign tasks. Browser + OpenClaw API.
+  Repo: [aikoooly/Claw-Arena](https://github.com/aikoooly/Claw-Arena)
+  Type: `app`
+  Tags: `multi-agent`, `openclaw`, `game`, `visualization`
+  Data: [entry.json](./skills/claw-arena/entry.json)
+
+- **ClawPort**: Open-source AI agent command center for OpenClaw — org chart, chat (vision/voice), kanban, cron monitor, cost tracking, activity console, memory browser
+  Repo: [JohnRiceML/clawport-ui](https://github.com/JohnRiceML/clawport-ui)
+  Type: `app`
+  Tags: `multi-agent`, `openclaw`, `dashboard`, `visualization`
+  Data: [entry.json](./skills/clawport-ui/entry.json)
+
 ## Tools
 
 - **agent-browser**: Browser automation CLI for AI agents — drive real browsers for navigation, forms, and screenshots
@@ -74,6 +94,12 @@ skills/
   Type: `tool`
   Tags: `multi-agent`, `tooling`, `automation`, `cli`
   Data: [entry.json](./skills/agent-browser/entry.json)
+
+- **Vercel Skills**: The open agent skills tool — discover and add skills via CLI (e.g. npx skills add). Official Vercel Labs skill registry
+  Repo: [vercel-labs/skills](https://github.com/vercel-labs/skills)
+  Type: `tool`
+  Tags: `multi-agent`, `tooling`, `skill`, `cli`
+  Data: [entry.json](./skills/vercel-skills/entry.json)
 
 ---
 

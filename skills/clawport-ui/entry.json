@@ -1,0 +1,10 @@
+{
+  "slug": "clawport-ui",
+  "name": "ClawPort",
+  "description": "Open-source AI agent command center for OpenClaw — org chart, chat (vision/voice), kanban, cron monitor, cost tracking, activity console, memory browser.",
+  "description_zh": "面向 OpenClaw 的开源智能体指挥中心：组织图、对话（视觉/语音）、看板、Cron 监控、成本统计、活动控制台与记忆浏览",
+  "github": "JohnRiceML/clawport-ui",
+  "tags": ["multi-agent", "openclaw", "dashboard", "visualization"],
+  "added": "2026-03-10",
+  "type": "app"
+}
