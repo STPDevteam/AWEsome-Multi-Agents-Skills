@@ -3,7 +3,7 @@
 > Open-source Skill index for Autonomous World / Multi-Agent
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
-[![Skills](https://img.shields.io/badge/skills-20-brightgreen)](./skills/)
+[![Skills](https://img.shields.io/badge/skills-21-brightgreen)](./skills/)
 [![Dashboard](https://img.shields.io/badge/Dashboard-AWEsome%20Dashboard-blue)](https://awesome-dashboard-eight.vercel.app/)
 
 ## About
@@ -72,6 +72,12 @@ skills/
   Type: `skill`
   Tags: `multi-agent`, `tooling`, `skill`
   Data: [entry.json](./skills/clawhub-skill-creator/entry.json)
+
+- **RootData Crypto**: ClawHub skill for querying crypto project details, Web3 investor profiles, funding rounds, and trending projects from RootData
+  Source: [clawhub.ai/rdquanyu/rootdata-crypto](https://clawhub.ai/rdquanyu/rootdata-crypto)
+  Type: `skill`
+  Tags: `multi-agent`, `crypto`, `web3`, `funding`, `investors`
+  Data: [entry.json](./skills/rootdata-crypto/entry.json)
 
 ## Frameworks
 

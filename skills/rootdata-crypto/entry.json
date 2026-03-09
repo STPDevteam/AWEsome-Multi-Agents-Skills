@@ -1,0 +1,16 @@
+{
+  "slug": "rootdata-crypto",
+  "name": "RootData Crypto",
+  "description": "Query crypto project details, Web3 investor info, funding rounds, and trending projects from RootData.",
+  "description_zh": "查询 RootData 上的加密项目详情、Web3 投资人信息、融资轮次与热门项目。",
+  "source": {
+    "kind": "clawhub-skill",
+    "site": "clawhub.ai",
+    "owner": "rdquanyu",
+    "slug": "rootdata-crypto",
+    "url": "https://clawhub.ai/rdquanyu/rootdata-crypto"
+  },
+  "tags": ["multi-agent", "crypto", "web3", "funding", "investors"],
+  "added": "2026-03-10",
+  "type": "skill"
+}

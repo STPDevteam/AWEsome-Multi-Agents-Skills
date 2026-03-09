@@ -3,7 +3,7 @@
 > 面向 Autonomous World / Multi-Agent 的开源 Skill 索引
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
-[![Skills](https://img.shields.io/badge/skills-20-brightgreen)](./skills/)
+[![Skills](https://img.shields.io/badge/skills-21-brightgreen)](./skills/)
 [![Dashboard](https://img.shields.io/badge/Dashboard-AWEsome%20Dashboard-blue)](https://awesome-dashboard-eight.vercel.app/)
 
 ## 关于
@@ -72,6 +72,12 @@ skills/
   类型：`skill`
   标签：`multi-agent`, `tooling`, `skill`
   数据：[entry.json](./skills/clawhub-skill-creator/entry.json)
+
+- **RootData Crypto**: 基于 ClawHub 的加密数据 skill，用于查询项目详情、Web3 投资人、融资轮次与热门项目
+  来源：[clawhub.ai/rdquanyu/rootdata-crypto](https://clawhub.ai/rdquanyu/rootdata-crypto)
+  类型：`skill`
+  标签：`multi-agent`, `crypto`, `web3`, `funding`, `investors`
+  数据：[entry.json](./skills/rootdata-crypto/entry.json)
 
 ## 框架
 
