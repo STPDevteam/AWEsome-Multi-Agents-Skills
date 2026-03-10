@@ -1,0 +1,13 @@
+{
+  "slug": "onchainos-skills",
+  "name": "onchainos Skills",
+  "description": "OKX OnchainOS skills for AI agents: wallet, token discovery, market data, DEX swap, and transaction broadcasting.",
+  "description_zh": "OKX OnchainOS 的 AI 智能体技能集合，覆盖钱包、代币发现、行情数据、DEX 兑换与交易广播。",
+  "source": {
+    "kind": "github-repo",
+    "repo": "okx/onchainos-skills"
+  },
+  "tags": ["multi-agent", "wallet", "payment", "tooling"],
+  "added": "2026-03-11",
+  "type": "skill"
+}

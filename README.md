@@ -3,7 +3,7 @@
 > Open-source Skill index for Autonomous World / Multi-Agent
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
-[![Skills](https://img.shields.io/badge/skills-21-brightgreen)](./skills/)
+[![Skills](https://img.shields.io/badge/skills-22-brightgreen)](./skills/)
 [![Dashboard](https://img.shields.io/badge/Dashboard-AWEsome%20Dashboard-blue)](https://awesome-dashboard-eight.vercel.app/)
 
 ## About
@@ -78,6 +78,12 @@ skills/
   Type: `skill`
   Tags: `multi-agent`, `crypto`, `web3`, `funding`, `investors`
   Data: [entry.json](./skills/rootdata-crypto/entry.json)
+
+- **onchainos Skills**: OKX OnchainOS skill pack for AI agents — wallet, token discovery, market data, DEX swap, and transaction broadcasting
+  Repo: [okx/onchainos-skills](https://github.com/okx/onchainos-skills)
+  Type: `skill`
+  Tags: `multi-agent`, `wallet`, `payment`, `tooling`
+  Data: [entry.json](./skills/onchainos-skills/entry.json)
 
 ## Frameworks
 

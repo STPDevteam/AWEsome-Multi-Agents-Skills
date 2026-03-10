@@ -3,7 +3,7 @@
 > 面向 Autonomous World / Multi-Agent 的开源 Skill 索引
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
-[![Skills](https://img.shields.io/badge/skills-21-brightgreen)](./skills/)
+[![Skills](https://img.shields.io/badge/skills-22-brightgreen)](./skills/)
 [![Dashboard](https://img.shields.io/badge/Dashboard-AWEsome%20Dashboard-blue)](https://awesome-dashboard-eight.vercel.app/)
 
 ## 关于
@@ -78,6 +78,12 @@ skills/
   类型：`skill`
   标签：`multi-agent`, `crypto`, `web3`, `funding`, `investors`
   数据：[entry.json](./skills/rootdata-crypto/entry.json)
+
+- **onchainos Skills**: OKX OnchainOS 的智能体技能包，覆盖钱包、代币发现、行情数据、DEX 兑换与交易广播
+  仓库：[okx/onchainos-skills](https://github.com/okx/onchainos-skills)
+  类型：`skill`
+  标签：`multi-agent`, `wallet`, `payment`, `tooling`
+  数据：[entry.json](./skills/onchainos-skills/entry.json)
 
 ## 框架
 
