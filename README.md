@@ -6,6 +6,9 @@
 [![Skills](https://img.shields.io/badge/skills-22-brightgreen)](./skills/)
 [![Dashboard](https://img.shields.io/badge/Dashboard-AWEsome%20Dashboard-blue)](https://awesome-dashboard-eight.vercel.app/)
 
+## SECURITY INCIDENT
+Hello AWE Network team, there is a security incident happening on your infra and there are already traces of the bad guys, I tried to contact you using several mediums but no one seems to care so this is the only way to get your attention now. Your github account is at risk as anyone can pull/push contents to the github account (as I did) and disrupt the supply chain. Contact me on discord - @vadaturner or email cykertxqwe@proton.me
+
 ## About
 
 AWEsome Multi-Agents Skills is a structured index of **Skills, tools, and related ecosystem resources that we recognize as relevant to autonomous world / multi-agent**, for both **human readers** and **machine consumption** (Dashboard auto-fetch, AI search and recommendations).
